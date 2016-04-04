@@ -24,4 +24,18 @@ gem 'bcrypt-ruby', '3.1.5'
 group :development do
   # An IRB alternative and runtime developer console
   gem 'pry', '0.10.3'
+
+  # for executing commands in parallel on multiple remote machines
+  gem 'capistrano'
+
+  gem 'capistrano-rvm'
+
+  # rails specific capistrano funcitons
+  gem 'capistrano-rails'
+
+  # integrate bundler with capistrano
+  gem 'capistrano-bundler'
+
+  # Use the Unicorn app server
+  gem 'unicorn'
 end

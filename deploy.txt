@@ -1,0 +1,29 @@
+#############
+### setup ###
+#############
+
+ssh user@server
+apt-get update
+apt-get install git ???
+
+--- rvm ---
+
+curl -L https://get.rvm.io | bash -s
+rvm get stable
+???
+reboot
+???
+rvm requirements
+
+--- ruby ---
+
+rvm install 2.3.0 --with-openssl-dir=$HOME/.rvm/usr
+
+--- rails ---
+
+rvm use 2.3.0@rails426 --create --default
+vim ~/.gemrc
+install: --no-rdoc --no-ri
+update:  --no-rdoc --no-ri
+gem install rails --version 4.2.6
+apt-get install libxslt-dev libxml2-dev libsqlite3-dev
