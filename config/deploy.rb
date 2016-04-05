@@ -25,7 +25,7 @@ set :symlinks, [{
 after 'deploy:publishing', 'deploy:restart'
 
 namespace :deploy do
-  task :restart do
-    invoke 'unicorn:restart'
-  end
+  after :finishing, 'deploy:cleanup'
+  after :finishing, 'deploy:assets:precompile'
+  after :finishing, 'unicorn:restart'
 end

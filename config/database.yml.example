@@ -2,7 +2,7 @@ postgresql: &postgresql
   adapter: postgresql
   username: postgres
   password:
-  database: siple_blog<%= Rails.env %>
+  database: siple_blog_<%= Rails.env %>
   min_messages: ERROR
 
 defaults: &defaults

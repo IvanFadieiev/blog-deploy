@@ -38,4 +38,7 @@ group :development do
 
   # Use the Unicorn app server
   gem 'unicorn'
+
+  # Capistrano 3.x plugin that integrates Unicorn server tasks
+  gem 'sepastian-capistrano3-unicorn', require: false
 end
