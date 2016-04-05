@@ -21,6 +21,11 @@ gem 'uglifier', '3.0.0'
 # provides a simple wrapper for safely handling passwords
 gem 'bcrypt-ruby', '3.1.5'
 
+group :poduction do
+  # Use the Unicorn app server
+  gem 'unicorn'
+end
+
 group :development do
   # An IRB alternative and runtime developer console
   gem 'pry', '0.10.3'
@@ -36,9 +41,6 @@ group :development do
   # integrate bundler with capistrano
   gem 'capistrano-bundler'
 
-  # Use the Unicorn app server
-  gem 'unicorn'
-
   # Capistrano 3.x plugin that integrates Unicorn server tasks
-  gem 'sepastian-capistrano3-unicorn', require: false
+  gem 'capistrano3-unicorn'
 end

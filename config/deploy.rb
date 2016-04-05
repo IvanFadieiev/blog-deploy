@@ -22,10 +22,10 @@ set :symlinks, [{
   link: "/etc/nginx/sites-enabled/#{fetch(:application)}"
 }]
 
-after 'deploy:publishing', 'deploy:restart'
+# after 'deploy:publishing', 'deploy:restart'
 
 namespace :deploy do
   after :finishing, 'deploy:cleanup'
   after :finishing, 'deploy:assets:precompile'
-  after :finishing, 'unicorn:restart'
+  after :finishing, 'unicorn:start'
 end
