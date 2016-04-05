@@ -27,5 +27,5 @@ set :symlinks, [{
 namespace :deploy do
   after :finishing, 'deploy:cleanup'
   after :finishing, 'deploy:assets:precompile'
-  after :finishing, 'unicorn:start'
+  after :finishing, 'unicorn:restart'
 end
