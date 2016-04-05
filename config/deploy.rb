@@ -15,17 +15,20 @@ set :linked_dirs, %w{bin log tmp/pids tmp/cache tmp/sockets public/system}
 
 set :keep_releases, 5
 
-set :config_files, 'nginx.conf'
+set :deploy_to, '/home/alex/projects/simple_blog'
+set :unicorn_pid, "#{deploy_to}/shared/tmp/pids/unicorn.pid"
 
-set :symlinks, [{
-  source: 'nginx.conf',
-  link: "/etc/nginx/sites-enabled/#{fetch(:application)}"
-}]
+# set :config_files, 'nginx.conf'
+
+# set :symlinks, [{
+#   source: 'nginx.conf',
+#   link: "/etc/nginx/sites-enabled/#{fetch(:application)}"
+# }]
 
 # after 'deploy:publishing', 'deploy:restart'
 
 namespace :deploy do
   after :finishing, 'deploy:cleanup'
   after :finishing, 'deploy:assets:precompile'
-  after :finishing, 'unicorn:restart'
+  after :finishing, 'unicorn:start'
 end
