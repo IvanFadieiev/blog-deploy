@@ -3,7 +3,7 @@ lock '3.4.0'
 
 set :rvm_ruby_version, '2.3.0@rails426'
 
-set :application, 'simple_blog_capy'
+set :application, 'simple_blog'
 
 set :repo_url, 'git@github.com:AlexStepanenko/simple_blog_capy.git'
 

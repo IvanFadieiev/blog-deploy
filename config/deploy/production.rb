@@ -1,9 +1,9 @@
-set :deploy_to, '/home/projects/simple_blog_capy'
+set :deploy_to, '/home/alex/projects/simple_blog'
 set :rails_env, :production
 set :branch, :master
 
-server '104.131.95.23',
+server '45.55.135.133',
   roles: %w{web app db},
   ssh_options: {
-    user: 'root'
+    user: 'alex'
   }
