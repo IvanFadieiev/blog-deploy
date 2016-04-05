@@ -11,6 +11,7 @@ ssh user_name@server
 sudo apt-get update
 sudo apt-get install git
 sudo apt-get install nodejs
+apt-get -y install nginx
 sudo apt-get install libxslt-dev libxml2-dev libsqlite3-dev
 sudo apt-get install postgresql postgresql-contrib libpq-dev
 
@@ -35,3 +36,6 @@ vim ~/.gemrc
 install: --no-rdoc --no-ri
 update:  --no-rdoc --no-ri
 gem install rails --version 4.2.6
+
+--- unicorn ---
+bundle exec unicorn -D -c config/unicorn/production.rb # first time
