@@ -15,8 +15,8 @@ set :linked_dirs, %w{bin log tmp/pids tmp/cache tmp/sockets public/system}
 
 set :keep_releases, 5
 
-set :deploy_to, '/home/alex/projects/simple_blog'
-set :unicorn_pid, "#{deploy_to}/shared/tmp/pids/unicorn.pid"
+# set :deploy_to, '/home/alex/projects/simple_blog'
+# set :unicorn_pid, "#{deploy_to}/shared/tmp/pids/unicorn.pid"
 
 # set :config_files, 'nginx.conf'
 
