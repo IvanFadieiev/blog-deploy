@@ -1,13 +1,16 @@
 --- setup ---
 ssh root@server
+
 export LANGUAGE="en_US.UTF-8"
 echo 'LANGUAGE="en_US.UTF-8"' >> /etc/default/locale
 echo 'LC_ALL="en_US.UTF-8"' >> /etc/default/locale
+
 adduser user_name
 visudo
 user_name ALL=(ALL:ALL) ALL
 ssh-copy-id user_name@server
 ssh user_name@server
+
 sudo apt-get update
 sudo apt-get -y install git
 sudo apt-get -y install nodejs
@@ -42,5 +45,5 @@ bundle exec unicorn -D -c config/unicorn/production.rb # first time?
 
 --- nginx ---
 sudo rm /etc/nginx/sites-enabled/default
-sudo ln -nfs "/home/deploy/apps/app_name/current/config/nginx/production.conf" "/etc/nginx/sites-enabled/app_name"
+sudo ln -nfs "/home/deploy/apps/simple_blog/current/config/nginx/production.conf" "/etc/nginx/sites-enabled/simple_blog"
 sudo service nginx restart
