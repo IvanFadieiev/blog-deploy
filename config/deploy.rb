@@ -15,12 +15,12 @@ set :linked_dirs, %w{bin log tmp/pids tmp/cache tmp/sockets public/system}
 
 set :keep_releases, 5
 
-# set :config_files, 'nginx.conf'
+set :config_files, 'nginx.conf'
 
-# set :symlinks, [{
-#   source: 'nginx.conf',
-#   link: "/etc/nginx/sites-enabled/#{fetch(:application)}"
-# }]
+set :symlinks, [{
+  source: 'nginx.conf',
+  link: "/etc/nginx/sites-enabled/#{fetch(:application)}"
+}]
 
 namespace :deploy do
   after :finishing, 'deploy:cleanup'
