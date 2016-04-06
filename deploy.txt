@@ -38,4 +38,9 @@ update:  --no-rdoc --no-ri
 gem install rails --version 4.2.6
 
 --- unicorn ---
-bundle exec unicorn -D -c config/unicorn/production.rb # first time
+bundle exec unicorn -D -c config/unicorn/production.rb # first time?
+
+--- nginx ---
+sudo rm /etc/nginx/sites-enabled/default
+sudo ln -nfs "/home/deploy/apps/app_name/current/config/nginx/production.conf" "/etc/nginx/sites-enabled/app_name"
+sudo service nginx restart
