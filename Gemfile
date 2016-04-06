@@ -23,7 +23,7 @@ gem 'bcrypt-ruby', '3.1.5'
 
 group :poduction do
   # Use the Unicorn app server
-  gem 'unicorn'
+  gem 'unicorn', '5.1.0'
 end
 
 group :development do
@@ -31,16 +31,16 @@ group :development do
   gem 'pry', '0.10.3'
 
   # for executing commands in parallel on multiple remote machines
-  gem 'capistrano'
+  gem 'capistrano', '3.4.0'
 
-  gem 'capistrano-rvm'
+  gem 'capistrano-rvm', '0.1.2'
 
   # rails specific capistrano funcitons
-  gem 'capistrano-rails'
+  gem 'capistrano-rails', '1.1.6'
 
   # integrate bundler with capistrano
-  gem 'capistrano-bundler'
+  gem 'capistrano-bundler', '1.1.4'
 
   # Capistrano 3.x plugin that integrates Unicorn server tasks
-  gem 'capistrano3-unicorn'
+  gem 'capistrano3-unicorn', '0.2.1'
 end
