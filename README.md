@@ -19,11 +19,7 @@
 
 `sudo apt-get update`
 
-`sudo apt-get -y install git`
-
-`sudo apt-get -y install nodejs`
-
-`sudo apt-get -y install nginx`
+`sudo apt-get -y install git nodejs nginx`
 
 `sudo apt-get -y install libxslt-dev libxml2-dev libsqlite3-dev`
 
