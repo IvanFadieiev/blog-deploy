@@ -1,4 +1,4 @@
-set :deploy_to, '/home/alex/simple_blog'
+set :deploy_to, '/home/deploy/blog'
 set :rails_env, :production
 set :branch, :master
 

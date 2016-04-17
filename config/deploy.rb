@@ -1,7 +1,7 @@
 # config valid only for current version of Capistrano
 lock '3.4.0'
 
-set :rvm_ruby_version, '2.3.0@rails426'
+set :rvm_ruby_version, '2.1.3@rails426'
 
 set :application, 'simple_blog'
 
