@@ -1,6 +1,6 @@
 worker_processes 1
 
-APP_DIR = '/home/deploy/blog'
+APP_DIR = '/home/deployer/blog'
 working_directory APP_DIR + '/current'
 
 pid APP_DIR + '/shared/tmp/pids/unicorn.pid'
